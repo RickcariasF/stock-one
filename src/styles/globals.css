@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+/* Conecta la paleta con las utilidades de Tailwind (bg-paper, text-ink, bg-gold...). */
+@theme inline {
+  --color-paper: var(--stock-one-paper);
+  --color-ink: var(--stock-one-ink);
+  --color-ink-soft: var(--stock-one-ink-soft);
+  --color-line: var(--stock-one-line);
+  --color-tint-1: var(--stock-one-tint-1);
+  --color-tint-2: var(--stock-one-tint-2);
+  --color-tint-3: var(--stock-one-tint-3);
+  --color-tint-4: var(--stock-one-tint-4);
+  --color-action: var(--stock-one-action);
+  --color-on-action: var(--stock-one-on-action);
+  --color-focus: var(--stock-one-focus);
+  --color-danger: var(--stock-one-danger);
+  --color-gold: var(--stock-one-gold);
+  --color-purple: var(--stock-one-purple);
+  --color-surface-dark: var(--stock-one-surface-dark);
+  --color-surface-light: var(--stock-one-surface-light);
+  /* Una sola familia: condensada para títulos y marcas, ancho normal para leer. */
+  --font-display: "Archivo Variable", system-ui, sans-serif;
+  --font-body: "Archivo Variable", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--stock-one-paper);
+    color: var(--stock-one-ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+  }
+  :focus-visible {
+    outline: 3px solid var(--stock-one-focus);
+    outline-offset: 3px;
+  }
+  /* Sobre negro el morado no se distingue: el foco pasa a dorado. */
+  .on-dark :focus-visible {
+    outline-color: var(--stock-one-gold);
+  }
+}
+
+@layer utilities {
+  /* Ancho condensado de Archivo: la voz urbana de la marca. */
+  .condensed {
+    font-family: var(--font-display);
+    font-stretch: 68%;
+  }
+}
+
+/* Burbuja de chat: esquina recta donde iría la cola del mensaje. */
+.bubble-in {
+  border-radius: 1.5rem 1.5rem 1.5rem 0.3rem;
+}
+
+/* Única animación automática: la frase llega como un mensaje que se está escribiendo. */
+.hero-dots {
+  animation: hero-dots-out 0.2s linear 1.1s forwards;
+}
+.hero-dots span {
+  animation: hero-dot 0.6s ease-in-out infinite alternate;
+}
+.hero-dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.hero-dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.hero-message {
+  opacity: 0;
+  animation: hero-message-in 0.3s ease-out 1.2s forwards;
+}
+@keyframes hero-dot {
+  to {
+    transform: translateY(-5px);
+  }
+}
+@keyframes hero-dots-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hero-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-dots {
+    display: none;
+  }
+  .hero-message {
+    opacity: 1;
+    animation: none;
+  }
+}

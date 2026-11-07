@@ -1,0 +1,35 @@
+/*
+ * Paleta de Stock One (fuente: brand/MANUAL-DE-MARCA.md).
+ * Es el único archivo con colores: el sitio y el editor los leen de aquí.
+ * Proporción orientativa: 55 % negro, 25 % blanco, 15 % dorado y 5 % morado.
+ */
+:root {
+  /* Base */
+  --stock-one-paper: #ffffff; /* fondo principal */
+  --stock-one-ink: #111111; /* navegación, encabezados y texto principal */
+  --stock-one-ink-soft: #555555; /* texto secundario (7.5:1 sobre blanco) */
+  --stock-one-line: #e5e5e5; /* bordes */
+
+  /* Tintes de interfaz */
+  --stock-one-tint-1: #f5eed5; /* dorado suave: etiquetas */
+  --stock-one-tint-2: #f0eaf6; /* morado suave: fondos complementarios */
+  --stock-one-tint-3: #f5f5f5; /* gris neutro */
+  --stock-one-tint-4: #fff8e5; /* crema: avisos */
+
+  /* Acciones */
+  --stock-one-action: #bc9c22; /* acción principal: fondo dorado */
+  --stock-one-on-action: #111111; /* texto sobre dorado (7.3:1) */
+  --stock-one-focus: #65428a; /* anillo de foco del teclado */
+  --stock-one-danger: #b42336; /* errores y acciones destructivas */
+
+  /* Colores de marca */
+  --stock-one-black: #111111;
+  --stock-one-gold: #bc9c22; /* como texto, solo sobre negro: sobre blanco no llega a 4.5:1 */
+  --stock-one-white: #ffffff;
+  --stock-one-purple: #65428a;
+
+  /* Superficies y texto auxiliar */
+  --stock-one-text-muted: #777777; /* solo texto grande: sobre blanco queda en 4.48:1 */
+  --stock-one-surface-dark: #1a1a1a;
+  --stock-one-surface-light: #f8f8f8; /* fondo de las fotos de producto */
+}

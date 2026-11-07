@@ -1,0 +1,21 @@
+# Dependencias y salidas de compilación
+node_modules/
+.next/
+out/
+.wrangler/
+next-env.d.ts
+*.tsbuildinfo
+
+# Secretos: nunca se suben. Los del despliegue viven en GitHub.
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Sistema operativo y registros
+.DS_Store
+Thumbs.db
+*.log
+
+# Fotos de origen sin procesar: el editor publica las versiones optimizadas.
+imagenes-ignore/

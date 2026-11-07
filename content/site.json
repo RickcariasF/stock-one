@@ -1,0 +1,9 @@
+{
+  "name": "Stock One",
+  "tagline": "Sneakers de las marcas que buscas. Elige tu par y pídelo por WhatsApp.",
+  "url": "https://stock-one.example",
+  "whatsappNumber": "87373903",
+  "whatsappGreeting": "Hola, me interesa este par:",
+  "currency": "HNL",
+  "locale": "es-HN"
+}

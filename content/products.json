@@ -1,0 +1,393 @@
+[
+  {
+    "id": "numeris-tenis-casual-beige-estampado",
+    "name": "Tenis casual beige estampado",
+    "description": "Estampado beige con manchas claras. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-casual-beige-estampado-284e2805",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-urbano-gris-pintura",
+    "name": "Tenis urbano gris pintura",
+    "description": "Gris con acabado tipo pintura. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-urbano-gris-pintura-334a6372",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-denim-azul-cordones",
+    "name": "Tenis denim azul cordones",
+    "description": "Tela denim azul con cordones a juego. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-denim-azul-cordones-845fc6af",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-clasico-negro-blanco",
+    "name": "Tenis clásico negro blanco",
+    "description": "Negro con puntera y suela blancas. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-clasico-negro-blanco-114604e6",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-piel-gris-perla",
+    "name": "Tenis piel gris perla",
+    "description": "Piel en gris perla, acabado liso. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-piel-gris-perla-1836f0f4",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-moderno-camuflaje-gris",
+    "name": "Tenis moderno camuflaje gris",
+    "description": "Camuflaje en tonos grises. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-moderno-camuflaje-gris-fbad44fd",
+        "width": 946,
+        "height": 927
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-urbano-negro-salpicado",
+    "name": "Tenis urbano negro salpicado",
+    "description": "Negro con salpicaduras claras. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-urbano-negro-salpicado-c2d574bc",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-casual-negro-suela-blanca",
+    "name": "Tenis casual negro suela blanca",
+    "description": "Negro con suela blanca contrastante. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-casual-negro-suela-blanca-be775ede",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-casual-verde-salvia",
+    "name": "Tenis casual verde salvia",
+    "description": "Verde salvia, tono suave. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-casual-verde-salvia-873f54b3",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-monocromatico-negro",
+    "name": "Tenis monocromático negro",
+    "description": "Totalmente negro, suela incluida. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-monocromatico-negro-0854fbc2",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-urbano-negro-estampado",
+    "name": "Tenis urbano negro estampado",
+    "description": "Negro con estampado en tonos grises. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-urbano-negro-estampado-a9397647",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-denim-negro-rosado",
+    "name": "Tenis denim negro rosado",
+    "description": "Denim negro con cordones rosados. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-denim-negro-rosado-43955de1",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-casual-gris-claro",
+    "name": "Tenis casual gris claro",
+    "description": "Gris claro de aspecto limpio. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-casual-gris-claro-df294a65",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-minimalista-blanco",
+    "name": "Tenis minimalista blanco",
+    "description": "Blanco de líneas simples. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-minimalista-blanco-150dc6a9",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-moderno-negro-rosado",
+    "name": "Tenis moderno negro rosado",
+    "description": "Negro con estampado rosado. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-moderno-negro-rosado-290ad81d",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-casual-verde-militar",
+    "name": "Tenis casual verde militar",
+    "description": "Verde militar con detalles claros. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-casual-verde-militar-ac6aaec5",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-denim-oscuro-desgastado",
+    "name": "Tenis denim oscuro desgastado",
+    "description": "Denim oscuro con efecto desgastado. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-denim-oscuro-desgastado-f3734077",
+        "width": 946,
+        "height": 934
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-urbano-azul-celeste",
+    "name": "Tenis urbano azul celeste",
+    "description": "Azul celeste con textura jaspeada. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-urbano-azul-celeste-ed7469a5",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-multicolor-pastel",
+    "name": "Tenis multicolor pastel",
+    "description": "Mezcla de colores pastel. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-multicolor-pastel-ca77f470",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-elegante-negro-brillo",
+    "name": "Tenis elegante negro brillo",
+    "description": "Negro con destellos brillantes. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-elegante-negro-brillo-29ddc882",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-denim-marmoleado-azul",
+    "name": "Tenis denim marmoleado azul",
+    "description": "Denim azul con efecto marmoleado. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-denim-marmoleado-azul-e241e3b8",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-gamuza-beige-claro",
+    "name": "Tenis gamuza beige claro",
+    "description": "Gamuza en beige claro. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-gamuza-beige-claro-310880d7",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  },
+  {
+    "id": "numeris-tenis-denim-rosado-pastel",
+    "name": "Tenis denim rosado pastel",
+    "description": "Denim en rosado pastel. Tenis de corte bajo con suela blanca dentada y cordones anchos.",
+    "priceCents": 10000,
+    "brandId": "numeris",
+    "images": [
+      {
+        "id": "numeris-tenis-denim-rosado-pastel-a3cf7800",
+        "width": 946,
+        "height": 946
+      }
+    ],
+    "status": "available",
+    "featured": false,
+    "stock": 1
+  }
+]

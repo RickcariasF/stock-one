@@ -1,0 +1,5 @@
+# Finales de línea uniformes entre Windows y Linux.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.webp binary
+*.png binary

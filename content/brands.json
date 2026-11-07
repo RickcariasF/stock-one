@@ -1,0 +1,37 @@
+[
+  {
+    "id": "numeris",
+    "name": "NUMERIS",
+    "comingSoon": false
+  },
+  {
+    "id": "adidas",
+    "name": "Adidas",
+    "comingSoon": true
+  },
+  {
+    "id": "converse",
+    "name": "Converse",
+    "comingSoon": true
+  },
+  {
+    "id": "new-balance",
+    "name": "New Balance",
+    "comingSoon": true
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "comingSoon": true
+  },
+  {
+    "id": "puma",
+    "name": "Puma",
+    "comingSoon": true
+  },
+  {
+    "id": "vans",
+    "name": "Vans",
+    "comingSoon": true
+  }
+]

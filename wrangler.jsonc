@@ -1,0 +1,14 @@
+{
+  // Stock One: sitio 100 % estático: Cloudflare sirve los archivos de `out/` sin ejecutar código.
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Define la dirección stock-one.<tu-subdominio>.workers.dev.
+  "name": "stock-one",
+  "compatibility_date": "2026-10-01",
+  // Sin direcciones extra por versión: solo existe la dirección principal.
+  "preview_urls": false,
+  "assets": {
+    "directory": "./out",
+    // Usa nuestra página 404.html para rutas inexistentes.
+    "not_found_handling": "404-page"
+  }
+}

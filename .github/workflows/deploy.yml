@@ -1,0 +1,74 @@
+# Cada push a main valida, compila y publica el sitio. Los pull requests solo validan.
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Mínimo privilegio: el token de GitHub solo puede leer el repositorio.
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Validar y compilar
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      # Las acciones se fijan por commit: una etiqueta se puede mover, un hash no.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@9bbca1e9dc2902adb87e8780fe5c98796985a62d # v6.1.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - name: Instalar dependencias exactas del lockfile
+        run: pnpm install --frozen-lockfile
+      - name: Revisar tipos, estilo y pruebas
+        run: pnpm check
+      - name: Compilar el sitio estático
+        run: pnpm build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: sitio
+          path: out
+          retention-days: 1
+          if-no-files-found: error
+
+  deploy:
+    name: Publicar en Cloudflare
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    # El entorno limita los secretos a la rama main.
+    environment: production
+    # Una publicación espera a la anterior: nunca se interrumpe un despliegue a medias.
+    concurrency:
+      group: produccion
+      cancel-in-progress: false
+    # Este job tiene el secreto, así que no compila ni ejecuta código del proyecto:
+    # solo instala Wrangler desde el lockfile y sube lo que aprobó el job anterior.
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@9bbca1e9dc2902adb87e8780fe5c98796985a62d # v6.1.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: sitio
+          path: out
+      - name: Desplegar
+        run: pnpm exec wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

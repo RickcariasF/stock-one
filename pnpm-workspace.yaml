@@ -1,0 +1,16 @@
+# Configuración de pnpm. Estas reglas reducen el riesgo de cadena de suministro.
+
+# Ningún paquete ejecuta scripts al instalarse: sus binarios ya vienen precompilados.
+allowBuilds:
+  esbuild: false
+  sharp: false
+  workerd: false
+
+# Espera 3 días (en minutos) antes de aceptar una versión recién publicada:
+# la mayoría de paquetes comprometidos se detectan y retiran en ese plazo.
+minimumReleaseAge: 4320
+
+# semver 6.3.2 aún no cumple la espera de 3 días; se fija la versión anterior.
+# Quitar esta línea cuando Dependabot proponga la siguiente actualización.
+overrides:
+  semver@^6: 6.3.1
