@@ -307,7 +307,7 @@ textarea {
 .photo .main-photo {
   background: var(--stock-one-action);
   border-radius: 999px;
-  bottom: 0.25rem;
+  top: 4.2rem;
   color: var(--stock-one-on-action);
   font-size: 0.7rem;
   font-weight: 700;
