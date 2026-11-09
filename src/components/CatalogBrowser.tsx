@@ -20,6 +20,8 @@ const normalize = (text: string) =>
 export function CatalogBrowser({ products, brands, site, whatsappBase }: Props) {
   const [query, setQuery] = useState("");
   const [brandId, setBrandId] = useState<string | null>(null);
+  // En teléfono las marcas se desplazan de lado: el aviso se oculta al llegar al final.
+  const [moreBrands, setMoreBrands] = useState(true);
 
   const brandName = useMemo(() => new Map(brands.map((b) => [b.id, b.name])), [brands]);
   const selected = brands.find((b) => b.id === brandId);
@@ -44,7 +46,10 @@ export function CatalogBrowser({ products, brands, site, whatsappBase }: Props) 
       {/* Las marcas en grande son el filtro principal y la cara de la tienda. */}
       <div className="on-dark bg-ink text-paper">
         <nav aria-label="Marcas" className="mx-auto max-w-7xl px-4 sm:px-6">
-          <ul className="-mx-4 flex gap-x-7 overflow-x-auto px-4 pb-5 sm:mx-0 sm:flex-wrap sm:px-0">
+          <ul
+            onScroll={({ currentTarget: el }) => setMoreBrands(el.scrollLeft + el.clientWidth < el.scrollWidth - 8)}
+            className="-mx-4 flex gap-x-7 overflow-x-auto px-4 pb-5 sm:mx-0 sm:flex-wrap sm:px-0"
+          >
             <BrandButton label="Todas" active={!brandId} onClick={() => setBrandId(null)} />
             {brands.map((brand) => (
               <BrandButton
@@ -55,6 +60,9 @@ export function CatalogBrowser({ products, brands, site, whatsappBase }: Props) 
               />
             ))}
           </ul>
+          <p aria-hidden className={`-mt-2 pb-4 text-sm text-[#bbbbbb] sm:hidden ${moreBrands ? "" : "invisible"}`}>
+            Desliza para ver más marcas →
+          </p>
         </nav>
       </div>
 
