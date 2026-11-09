@@ -10,7 +10,8 @@ export function Hero() {
   return (
     <section className="mx-auto max-w-7xl px-4 pt-4 pb-10 sm:px-6 md:pt-6">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:gap-10">
-        <h1 className={logo ? "shrink-0" : "condensed text-[clamp(4.5rem,19vw,15rem)] leading-[0.82] font-extrabold uppercase"}>
+        {/* En teléfono el logo va centrado; desde md vuelve a alinearse con la fila */}
+        <h1 className={logo ? "shrink-0 self-center md:self-auto" : "condensed text-[clamp(4.5rem,19vw,15rem)] leading-[0.82] font-extrabold uppercase"}>
           {logo ? (
             <img
               src={logo}
