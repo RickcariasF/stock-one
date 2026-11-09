@@ -26,7 +26,7 @@ export function Hero() {
         </h1>
 
         <div className="md:pb-3">
-          <p className="mb-2 text-sm text-[#bbbbbb]">{site.name} te escribe</p>
+          
           <div className="bubble-in relative max-w-xl bg-tint-1 px-6 py-4 text-ink">
             <div className="hero-dots absolute top-1/2 left-6 flex -translate-y-1/2 gap-1.5" aria-hidden="true">
               <span className="size-2.5 rounded-full bg-ink" />
