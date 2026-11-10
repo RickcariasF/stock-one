@@ -107,7 +107,8 @@ Reglas de negocio:
 - Contraste mínimo de 4.5:1. El dorado **nunca** va como texto sobre blanco (2.7:1): úsalo de fondo con
   texto negro, o como texto sobre negro.
 - Tipografía Archivo: condensada y extra negrita (`.condensed`) para el nombre, las marcas y los títulos.
-- Sin degradados ni sombras pesadas. La única animación automática es la del hero.
+- Sin degradados ni sombras pesadas. Animaciones automáticas: solo la del hero y el vaivén único de la
+  barra de marcas en teléfono (insinúa que se desliza). Ambas respetan `prefers-reduced-motion`.
 - No alteres los logos de Stock One ni los de las marcas exhibidas. `themeColor` = `#FFFFFF`.
 
 **Código**

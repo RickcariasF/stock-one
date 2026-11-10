@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Brand, Product, Site } from "@/lib/schema";
 import { ProductTile } from "./ProductTile";
 
@@ -20,8 +20,28 @@ const normalize = (text: string) =>
 export function CatalogBrowser({ products, brands, site, whatsappBase }: Props) {
   const [query, setQuery] = useState("");
   const [brandId, setBrandId] = useState<string | null>(null);
-  // En teléfono las marcas se desplazan de lado: el aviso se oculta al llegar al final.
-  const [moreBrands, setMoreBrands] = useState(true);
+  const brandList = useRef<HTMLUListElement>(null);
+
+  // En teléfono las marcas se desplazan de lado: al verlas por primera vez avanzan un poco y vuelven,
+  // para insinuar que hay más sin quitarle el lugar a las primeras. Una sola vez y sin forzar a quien
+  // prefiere menos movimiento.
+  useEffect(() => {
+    const list = brandList.current;
+    if (!list || list.scrollWidth <= list.clientWidth) return;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let timer: ReturnType<typeof setTimeout>;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      observer.disconnect();
+      list.scrollTo({ left: 120, behavior: "smooth" });
+      timer = setTimeout(() => list.scrollTo({ left: 0, behavior: "smooth" }), 700);
+    }, { threshold: 1 });
+    observer.observe(list);
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
+  }, []);
 
   const brandName = useMemo(() => new Map(brands.map((b) => [b.id, b.name])), [brands]);
   const selected = brands.find((b) => b.id === brandId);
@@ -47,7 +67,7 @@ export function CatalogBrowser({ products, brands, site, whatsappBase }: Props) 
       <div className="on-dark bg-ink text-paper">
         <nav aria-label="Marcas" className="mx-auto max-w-7xl px-4 sm:px-6">
           <ul
-            onScroll={({ currentTarget: el }) => setMoreBrands(el.scrollLeft + el.clientWidth < el.scrollWidth - 8)}
+            ref={brandList}
             className="-mx-4 flex gap-x-7 overflow-x-auto px-4 pb-5 sm:mx-0 sm:flex-wrap sm:px-0"
           >
             <BrandButton label="Todas" active={!brandId} onClick={() => setBrandId(null)} />
@@ -60,9 +80,6 @@ export function CatalogBrowser({ products, brands, site, whatsappBase }: Props) 
               />
             ))}
           </ul>
-          <p aria-hidden className={`-mt-2 pb-4 text-sm text-[#bbbbbb] sm:hidden ${moreBrands ? "" : "invisible"}`}>
-            Desliza para ver más marcas →
-          </p>
         </nav>
       </div>
 
