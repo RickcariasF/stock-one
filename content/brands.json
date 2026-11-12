@@ -1,37 +1,42 @@
 [
   {
-    "id": "numeris",
     "name": "NUMERIS",
-    "comingSoon": false
+    "comingSoon": false,
+    "id": "numeris"
   },
   {
-    "id": "adidas",
     "name": "Adidas",
-    "comingSoon": true
+    "comingSoon": true,
+    "id": "adidas"
   },
   {
-    "id": "converse",
     "name": "Converse",
-    "comingSoon": true
+    "comingSoon": true,
+    "id": "converse"
   },
   {
-    "id": "new-balance",
     "name": "New Balance",
-    "comingSoon": true
+    "comingSoon": true,
+    "id": "new-balance"
   },
   {
-    "id": "nike",
     "name": "Nike",
-    "comingSoon": true
+    "comingSoon": true,
+    "id": "nike"
   },
   {
-    "id": "puma",
     "name": "Puma",
-    "comingSoon": true
+    "comingSoon": true,
+    "id": "puma"
   },
   {
-    "id": "vans",
     "name": "Vans",
+    "comingSoon": true,
+    "id": "vans"
+  },
+  {
+    "id": "louis-vuitton",
+    "name": "LOUIS VUITTON",
     "comingSoon": true
   }
 ]
